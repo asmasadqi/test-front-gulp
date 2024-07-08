@@ -47,6 +47,8 @@ console.log(path.join(__dirname, "./temp"))
     file.endsWith(".pug")
   );
 
+  app.get("/", (req, res, next) => res.render("index"));
+
   files.forEach((file) => {
     const route = "" + file.split(".").slice(0, -1).join(".");
     app.get(`/${route}.html`, (req, res, next) => {
