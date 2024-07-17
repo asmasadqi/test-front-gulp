@@ -1,0 +1,51 @@
+.test-control {
+    &__checkbox {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+  
+      input[type="checkbox"] {
+        margin-right: 10px;
+      }
+  
+      label {
+        cursor: pointer;
+        font-family: Arial, sans-serif; // Assurez-vous d'utiliser une police qui supporte les caractères spéciaux
+      }
+    }
+  
+    &__error-message {
+      color: red;
+      display: flex;
+      align-items: center;
+      font-size: 0.8rem;
+      font-family: Arial, sans-serif; // Utilisation d'une police standard pour la cohérence
+  
+      &__error-icon {
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        border-radius: 50%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        font-size: 14px;
+        position: relative;
+        
+        &::before {
+          content: "\2716"; // Caractère Unicode pour la croix
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 14px; // Assurez-vous que la taille de la police est suffisante pour le cercle
+        }
+      }
+    }
+  }
