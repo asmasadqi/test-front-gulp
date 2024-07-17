@@ -1,0 +1,46 @@
+.demo {
+  background-color: orange;
+  padding: 20px;
+}
+
+.test-kit {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.test-kit__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.test-kit__status, .test-kit__project {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.test-kit__title {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.test-kit__info {
+  margin-top: 20px;
+}
+
+.test-kit__section-title {
+  font-size: 18px;
+}
+
+.test-kit__details {
+  margin-top: 10px;
+}
+
+.test-kit__role {
+  margin-top: 5px;
+}
