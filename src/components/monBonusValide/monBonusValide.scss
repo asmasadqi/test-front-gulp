@@ -15,12 +15,25 @@
         cursor: pointer;
     }
 
-    &__left, &__right {
+    &__left{
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
+    
+    &__val{
+        display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    }
+    &__blox{
+    padding: 1em;
+    }
+    .validetxt {
+        font-weight: bold;
+        color: #0C762E;
+    }
     @media (max-width: 768px) {
         flex-direction: column;
 

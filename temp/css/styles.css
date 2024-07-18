@@ -206,6 +206,7 @@
   text-align: center;
   align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .mon-bonus__title {
@@ -299,10 +300,25 @@
   cursor: pointer;
 }
 
-.mon-bonus__left, .mon-bonus__right {
+.mon-bonus__left {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+}
+
+.mon-bonus__val {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.mon-bonus__blox {
+  padding: 1em;
+}
+
+.mon-bonus .validetxt {
+  font-weight: bold;
+  color: #0C762E;
 }
 
 @media (max-width: 768px) {
