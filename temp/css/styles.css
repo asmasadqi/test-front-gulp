@@ -3,6 +3,33 @@
   padding: 20px;
 }
 
+.block-info {
+  display: flex;
+  align-items: center;
+  background-color: #E6F0FF;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  color: #003366;
+  font-size: 14px;
+  width: 400px;
+}
+
+.block-info__icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.block-info a {
+  color: #0072CE;
+  text-decoration: none;
+}
+
+.block-info a:hover {
+  text-decoration: underline;
+}
+
 .test-control__checkbox {
   display: flex;
   align-items: center;
@@ -39,4 +66,124 @@
   font-size: 14px;
   position: relative;
   border: 1px red solid;
+}
+
+.badge {
+  padding: 8px 20px;
+  border-radius: 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  display: block;
+  margin: 10px;
+  width: 75px;
+  align-items: center;
+  height: 20px;
+  border-radius: 10px 0px 10px 0px;
+}
+
+.purple {
+  background-color: #9A0CA7;
+}
+
+.green {
+  background-color: #008480;
+}
+
+.blue {
+  background-color: #007ACD;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.button-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+}
+
+.button-column .btn {
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background-color 0.3s, border-color 0.3s;
+  margin: 5px;
+  display: inline-block;
+  background: none;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.bg-blue {
+  background-color: #007ACD;
+  color: white;
+  border-color: #007ACD;
+}
+
+.bg-dark {
+  background-color: #002457;
+  color: white;
+  border-color: #002457;
+}
+
+.bg-light {
+  background-color: #E5E5E5;
+  color: #858585;
+  border-color: #E5E5E5;
+}
+
+.border-blue {
+  border-color: #007ACD;
+  color: #007ACD;
+}
+
+.border-dark {
+  border-color: #002457;
+  color: #002457;
+}
+
+.border-light {
+  border-color: #E5E5E5;
+  color: #E5E5E5;
+}
+
+.btn.transparent {
+  background-color: transparent;
+  color: black;
+  border-color: transparent;
+}
+
+.btn.text-blue {
+  color: #007ACD;
+  text-decoration: underline;
+  border: none;
+  background-color: transparent;
+}
+
+.btn.text-bluz {
+  color: #002457;
+  text-decoration: underline;
+  border: none;
+  background-color: transparent;
+}
+
+.btn.text-gray {
+  color: #858585;
+  text-decoration: underline;
+  border: none;
+  background-color: transparent;
 }
