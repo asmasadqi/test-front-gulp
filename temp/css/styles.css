@@ -1,20 +1,23 @@
-@charset "UTF-8";
 .demo {
   background-color: orange;
   padding: 20px;
 }
+
 .test-control__checkbox {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
+
 .test-control__checkbox input[type=checkbox] {
   margin-right: 10px;
 }
+
 .test-control__checkbox label {
   cursor: pointer;
   font-family: Arial, sans-serif;
 }
+
 .test-control__error-message {
   color: red;
   display: flex;
@@ -22,28 +25,18 @@
   font-size: 0.8rem;
   font-family: Arial, sans-serif;
 }
-.test-control__error-message__error-icon {
+
+.test-control__error-message .test-control__error-icon {
   width: 20px;
-  height: 20px;
-  background-color: red;
+  height: 19px;
+  background-color: white;
   border-radius: 50%;
-  color: white;
+  color: red;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 10px;
   font-size: 14px;
   position: relative;
-}
-.test-control__error-message__error-icon::before {
-  content: "✖";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
+  border: 1px red solid;
 }
