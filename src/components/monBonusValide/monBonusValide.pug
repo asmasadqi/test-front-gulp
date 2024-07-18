@@ -1,0 +1,16 @@
+include ../badgeTest/badgeTest
+include ../boutonTest/boutonTest
+include ../blockInfo/blockInfo
+
+mixin monBonusValide()
+  +badgeTest('purple topblock')
+  .mon-bonus
+    .mon-bonus__left
+      .mon-bonus__title Mon Bonus Engie
+      p Vous avez activé Mon Bonus. Merci pour votre participation!
+    .mon-bonus__right
+      +blockInfo()
+      p Les prochains jours critiques vous seront indiqués 1 à 4 jours à l'avance, sur cette page. #[a(href="#") Comment ça marche?]
+    .mon-bonus__close
+      img(src="path/to/close-icon.png", alt="Fermer")
+    img.mon-bonus__logo(src="images/logoBonPlan/bonus-ENGIE-Test-1.png", alt="Logo Bon Plan")

@@ -1,0 +1,38 @@
+.mon-bonus {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid #23D2B5;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'Lato', sans-serif;
+
+    &__close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    &__left, &__right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+
+        &__left, &__right {
+            width: 100%;
+            align-items: center;
+        }
+
+        &__logo {
+            left: auto;
+            right: 10px;
+            transform: scaleX(-1);
+        }
+    }
+}
