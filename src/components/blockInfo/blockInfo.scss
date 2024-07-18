@@ -7,14 +7,16 @@
     font-family: Arial, sans-serif; // Police standard
     color: #003366; // Couleur de texte bleu foncé
     font-size: 14px;
+    width: 400px; // Largeur fixe pour correspondre à l'image
   
     &__icon {
-      color: #0056b3; // Couleur de l'icône
+      width: 24px; // Taille de l'icône
+      height: 24px;
       margin-right: 10px; // Espace entre l'icône et le texte
     }
   
     a {
-      color: #0056b3; // Couleur du lien
+      color: #0072CE; // Couleur bleu ciel d'ENGIE
       text-decoration: none; // Pas de soulignement
   
       &:hover {
