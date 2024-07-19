@@ -1,0 +1,40 @@
+.test-control {
+    &__checkbox {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+  
+      input[type="checkbox"] {
+        margin-right: 10px;
+      }
+  
+      label {
+        cursor: pointer;
+        font-family: Arial, sans-serif; // Utilisation d'une police qui supporte les caractères spéciaux
+      }
+    }
+  
+    &__error-message {
+        color: red;
+        display: flex;
+        align-items: center;
+        font-size: 0.8rem;
+        font-family: 'Lato', sans-serif;
+ 
+  
+      .test-control__error-icon { // Correction du sélecteur pour cibler directement la classe
+        width: 20px;
+        height: 19px;
+        background-color:white;
+        border-radius: 50%;
+        color: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        font-size: 14px;
+        position: relative;
+        border: 1px red solid ;
+      }
+    }
+  }

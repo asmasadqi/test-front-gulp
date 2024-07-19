@@ -1,7 +1,34 @@
 extends ./pug-template/base
 //--------------------------------------------------
 
-include ./components/demo/demo
+include ./components/testControl/testControl
+include ./components/blockInfo/blockInfo
+include ./components/badgeTest/badgeTest
+include ./components/boutonTest/boutonTest 
+include ./components/monBonus/monBonus 
+include ./components/monBonusValide/monBonusValide 
 
 block content
-  +demo
+
+  +testControl()
+  +blockInfo()
+  +badgeTest('purple')
+  +badgeTest('green')
+  +badgeTest('blue')
+
+  .buttons-container
+    .button-column
+      +boutonTest('Label bouton', 'bg-blue', '')
+      +boutonTest('Label bouton', 'bg-dark', '')
+      +boutonTest('Label bouton', 'bg-light', '')
+    .button-column
+      +boutonTest('Label bouton', '', 'border-blue')
+      +boutonTest('Label bouton', '', 'border-dark')
+      +boutonTest('Label bouton', '', 'border-light')
+    .button-column
+      +boutonTest('Label bouton', 'text-blue', '')
+      +boutonTest('Label bouton', 'text-bluz', '')
+      +boutonTest('Label bouton', 'text-gray', '')
+
+  +monBonus()
+  +monBonusValide()
