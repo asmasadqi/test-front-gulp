@@ -1,0 +1,94 @@
+.nj-button {
+  // Reset styles for button to remove browser defaults
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  @include text-regular-default;
+
+  // Custom properties for the .as-button component
+  --nj-button-primary-bg-color: var(--color-primary-blue-default);
+  --nj-button-primary-hover-bg-color: var(--color-primary-blue-hover);
+  --nj-button-primary-disabled-bg-color: var(--color-primary-light-gray);
+  --nj-button-secondary-bg-color: transparent;
+  --nj-button-secondary-color: var(--color-primary-blue-default);
+  --nj-button-secondary-hover-bg-color: transparent;
+  --nj-button-secondary-disabled-bg-color: transparent;
+  --nj-button-ghost-bg-color: transparent;
+  --nj-button-ghost-color: var(--color-primary-blue-default);
+  --nj-button-ghost-hover-color: var(--color-primary-blue-hover);
+  --nj-button-ghost-disabled-color: var(--color-primary-medium-gray);
+  --nj-button-padding: 8px 20px;
+  --nj-button-border-radius: 0;
+  gap: 5px;
+  height: 44px;
+
+  //styles for the focus
+  &:focus-visible {
+    outline: max(2px, 0.15rem) solid var(--color-tertiary-teal);
+    outline-offset: max(2px, 0.15rem);
+  }
+
+  // Styles for the primary button variant
+  &--primary {
+    background-color: var(--nj-button-primary-bg-color);
+    color: var(--color-primary-white);
+    padding: var(--nj-button-padding);
+    border-radius: var(--nj-button-border-radius);
+    &:hover {
+      background-color: var(--nj-button-primary-hover-bg-color);
+    }
+    &:disabled {
+      background-color: var(--nj-button-primary-disabled-bg-color);
+      color: var(--nj-button-ghost-disabled-color);
+      cursor: not-allowed;
+    }
+  }
+
+  // Styles for the secondary button variant
+  &--secondary {
+    background-color: var(--nj-button-secondary-bg-color);
+    color: var(--nj-button-secondary-color);
+    padding: var(--nj-button-padding);
+    border: 1px solid var(--nj-button-secondary-color);
+    border-radius: var(--nj-button-border-radius);
+    &:hover {
+      background-color: var(--nj-button-secondary-hover-bg-color);
+      border-color: var(--color-primary-blue-hover);
+      color: var(--color-primary-blue-hover);
+    }
+    &:disabled {
+      border-color: var(--nj-button-ghost-disabled-color);
+      background-color: var(--nj-button-secondary-disabled-bg-color);
+      color: var(--nj-button-ghost-disabled-color);
+      cursor: not-allowed;
+    }
+  }
+
+  // Styles for the ghost button variant
+  &--ghost {
+    background-color: var(--nj-button-ghost-bg-color);
+    color: var(--nj-button-ghost-color);
+    padding: 0;
+    border: none;
+    height: auto;
+    text-decoration: underline;
+    &:hover {
+      color: var(--nj-button-ghost-hover-color);
+    }
+    &:disabled {
+      color: var(--nj-button-ghost-disabled-color);
+      cursor: not-allowed;
+    }
+  }
+}

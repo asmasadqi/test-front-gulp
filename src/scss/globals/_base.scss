@@ -1,0 +1,62 @@
+// Base Reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+// Base styles
+html {
+  font-family: var(--font-family-default);
+}
+
+body {
+  padding: 20px;
+  color: var(--primary-black);
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-base);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--font-line-height-default);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Remove list styles on ul, ol elements
+ul,
+ol {
+  list-style: none;
+}
+
+// Reset for images, videos, etc.
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Reset for links
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #e0e0e0;
+  margin: 20px 0;
+}

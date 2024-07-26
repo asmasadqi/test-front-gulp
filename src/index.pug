@@ -1,34 +1,47 @@
 extends ./pug-template/base
 //--------------------------------------------------
 
-include ./components/testControl/testControl
-include ./components/blockInfo/blockInfo
-include ./components/badgeTest/badgeTest
-include ./components/boutonTest/boutonTest 
-include ./components/monBonus/monBonus 
-include ./components/monBonusValide/monBonusValide 
+include ./components/button/button
+include ./components/badge/badge
+include ./components/infoBlock/infoBlock
+include ./components/formGroup/formGroup
+include ./components/pushPromo/pushPromo
 
 block content
 
-  +testControl()
-  +blockInfo()
-  +badgeTest('purple')
-  +badgeTest('green')
-  +badgeTest('blue')
+  +button('Label bouton', 'nj-button--primary', )
+  <hr>
+  +button('Label bouton', 'nj-button--secondary')
+  <hr>
+  +button('Label bouton', 'nj-button--ghost')
+  <hr>
 
-  .buttons-container
-    .button-column
-      +boutonTest('Label bouton', 'bg-blue', '')
-      +boutonTest('Label bouton', 'bg-dark', '')
-      +boutonTest('Label bouton', 'bg-light', '')
-    .button-column
-      +boutonTest('Label bouton', '', 'border-blue')
-      +boutonTest('Label bouton', '', 'border-dark')
-      +boutonTest('Label bouton', '', 'border-light')
-    .button-column
-      +boutonTest('Label bouton', 'text-blue', '')
-      +boutonTest('Label bouton', 'text-bluz', '')
-      +boutonTest('Label bouton', 'text-gray', '')
+  +badge('Bon plan ', 'primary')
+  //+badge('Bon plan ', 'primary', 'images/InfoLight.png')
+  +badge('Bon plan', 'secondary')
+  +badge('Bon plan', 'tertiary')
 
-  +monBonus()
-  +monBonusValide()
+  <hr>
+
+  +formGroup('J\'accepte les ', 'Conditions générales ', 'https://www.example.com/terms', ' de l\'offre Mon Bonus', 'Veuillez cocher pour accepter les conditions générales')
+
+  <hr>
+
+  +infoBlock('images/InfoLight.png', 'Téléchargez l\'application ENGIE', '#', 'pour être notifié du prochain jour de challenge.')
+  
+  <hr>
+
+  +pushPromo('Mon Bonus', 'Agissons ensemble !', 'L\'écodéfi Gaz vient de commencer ! Prêt à relever le défi ?', 'Bon plan', '')
+    p Cet hiver, réduisez vos consommations certains jours. Pour vous remercier, des primes vous seront reversées !
+    +formGroup('J\'accepte les ', 'Conditions générales ', 'https://www.example.com/terms', ' de l\'offre Mon Bonus', '')
+    div.push-promo__cta-wrapper
+      +button('Je participe', 'nj-button--primary', )
+      +button('Comment ça marche ?', 'nj-button--ghost')
+  
+  <hr>
+
+  +pushPromo('Mon Bonus', 'Agissons ensemble !', 'Vous avez activé Mon Bonus. Merci pour votre participation !', 'Bon plan', 'push-promo--accepted')
+    p Les prochains jours critiques vous seront indiqués 1 à 4 jours à l'avance, sur cette page.
+      +button('Comment ça marche ?', 'nj-button--ghost')
+    
+

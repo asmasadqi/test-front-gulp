@@ -1,0 +1,16 @@
+//- Import the checkbox component
+include ../checkbox/checkbox
+//- Import the button component
+include ../button/button
+
+mixin formGroup(beforeText, linkText, linkUrl, afterText, error)
+  div.form-group
+    div.form-group__control
+      +checkbox('accept-terms', false)
+      label(for="accept-terms").label-text
+        | #{beforeText} 
+        +button(linkText, 'nj-button--ghost', null, linkUrl)
+        | #{afterText}
+    div.form-group__feedback-msg
+      if error
+        p.form-group__error #{error}

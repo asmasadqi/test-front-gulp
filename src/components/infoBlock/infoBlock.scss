@@ -1,0 +1,19 @@
+.info-block {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-secondary-light-blue);
+  max-width: 400px;
+  padding: 15px;
+  gap: 10px;
+
+  &__icon {
+    flex-shrink: 0;
+    img {
+      width: 30px;
+    }
+  }
+
+  &__content {
+    color: var(--color-primary-black);
+  }
+}

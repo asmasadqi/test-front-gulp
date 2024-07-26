@@ -1,0 +1,151 @@
+.push-promo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border: 1px solid var(--color-primary-green-action);
+  border-radius: 5px;
+  padding: 20px 15px 30px 15px;
+  margin-bottom: 20px;
+  background-color: #fff;
+
+  background-image: url("../images/logoBonPlan/push-bonus-mobile.png");
+  background-repeat: no-repeat;
+  background-size: 66px 40px;
+  background-position: bottom right;
+  @include text-regular-default;
+
+  &__badge {
+    background-color: #9b51e0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+
+  &__close-button {
+    display: none;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    color: var(--color-primary-black);
+    cursor: pointer;
+  }
+
+  &__header {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    @include text-bold-lg;
+    margin: 0;
+  }
+
+  &__sub-title {
+    @include text-regular-default;
+    color: #666;
+    margin: 5px 0 0 0;
+  }
+
+  &__content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  &__content-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @include text-bold-default;
+  }
+
+  &--accepted {
+    .push-promo__close-button {
+      display: block;
+    }
+    .push-promo__content-title {
+      color: var(--color-alert-success);
+      &::before {
+        display: inline-flex;
+        align-items: center;
+        flex-shrink: 0;
+        content: "";
+        width: 25px;
+        height: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 25px 25px;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26" fill="none"><path d="M10.4167 14.6519L15.9301 9.13845L17.4032 10.6116L10.4167 17.5982L6.55509 13.7366L8.02823 12.2635L10.4167 14.6519Z" fill="%230C762E"/><path fill-rule="evenodd" clip-rule="evenodd" d="M1.04166 13C1.04166 19.3283 6.17173 24.4584 12.5 24.4584C18.8283 24.4584 23.9583 19.3283 23.9583 13C23.9583 6.67176 18.8283 1.54169 12.5 1.54169C6.17173 1.54169 1.04166 6.67176 1.04166 13ZM21.875 13C21.875 18.1777 17.6777 22.375 12.5 22.375C7.32232 22.375 3.12499 18.1777 3.12499 13C3.12499 7.82235 7.32232 3.62502 12.5 3.62502C17.6777 3.62502 21.875 7.82235 21.875 13Z" fill="%230C762E"/></svg>');
+      }
+    }
+  }
+  .badge {
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    left: 15px;
+  }
+
+  &__cta-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../images/logoBonPlan/push-bonus-mobile@2x.png");
+  }
+
+  @media (min-resolution: 3dppx) {
+    background-image: url("../images/logoBonPlan/push-bonus-mobile@3x.png");
+  }
+}
+
+// Desktop styles
+@media (min-width: 769px) {
+  .push-promo {
+    flex-direction: row;
+    max-width: 1200px;
+    padding: 20px 50px;
+    gap: 20px;
+    background-size: 80px 52px;
+    background-image: url("../images/logoBonPlan/push-bonus.png");
+    background-position: bottom left;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../images/logoBonPlan/push-bonus@2x.png");
+    }
+    @media (min-resolution: 3dppx) {
+      background-image: url("../images/logoBonPlan/push-bonus@3x.png");
+    }
+
+    &__content-container {
+      flex-direction: row;
+      gap: 20px;
+    }
+    .badge {
+      left: 50px;
+    }
+  }
+}

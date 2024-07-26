@@ -1,0 +1,86 @@
+//checkbox components
+
+.nj-checkbox {
+  //component tokens
+
+  --nj-checkbox-border-color: var(--color-primary-black);
+  --nj-checkbox-hover-border-color: var(--color-primary-black);
+  --nj-checkbox-active-border-color: var(--color-primary-black);
+  // checked state
+  --nj-checkbox-checked-bg-color: var(--color-primary-blue-default);
+  --nj-checkbox-checked-border-color: var(--color-primary-blue-default);
+  --nj-checkbox-checked-hover-bg-color: var(--color-primary-blue-default);
+  --nj-checkbox-checked-hover-border-color: var(--color-primary-blue-default);
+  --nj-checkbox-checked-active-bg-color: var(--color-primary-blue-default);
+  --nj-checkbox-checked-active-border-color: var(--color-primary-blue-default);
+
+  // disabled state
+  --nj-checkbox-disabled-bg-color: var(--color-primary-medium-gray);
+  --nj-checkbox-disabled-border-color: var(--color-primary-medium-gray);
+
+  --nj-checkbox-bg-color: var(--color-primary-white);
+  --nj-checkbox-size: 20px;
+  --nj-checkbox-checkmark-color: var(--color-primary-white);
+
+  // CSS for "hiding the native radio input"
+  -webkit-appearance: none;
+  appearance: none;
+  //For iOS < 15 to remove gradient background
+  background-color: #fff;
+  //Not removed via appearance
+  margin: 0;
+
+  font: inherit;
+  color: currentColor;
+  width: var(--nj-checkbox-size);
+  height: var(--nj-checkbox-size);
+  border: 1px solid var(--nj-checkbox-border-color);
+  background-color: var(--nj-checkbox-bg-color);
+  border-radius: 2px;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+
+  // styles for the checked state
+  &::after {
+    content: "";
+    width: var(--nj-checkbox-size);
+    height: var(--nj-checkbox-size);
+    border-radius: 0;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px 10px;
+    background-image: url("data:image/svg+xml;utf8,<svg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L5.70711 9.70711C5.51957 9.89464 5.26522 10 5 10C4.73478 10 4.48043 9.89464 4.29289 9.70711L0.292893 5.70711C-0.0976311 5.31658 -0.0976311 4.68342 0.292893 4.29289C0.683417 3.90237 1.31658 3.90237 1.70711 4.29289L5 7.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893Z' fill='white'/></svg>");
+  }
+  &:hover {
+    --nj-checkbox-border-color: var(--nj-checkbox-hover-border-color);
+  }
+  &:active {
+    --nj-checkbox-border-color: var(--nj-checkbox-active-border-color);
+  }
+  &:checked::after {
+    transform: scale(1);
+  }
+  &:checked {
+    --nj-checkbox-border-color: var(--nj-checkbox-checked-border-color);
+    --nj-checkbox-bg-color: var(--nj-checkbox-checked-bg-color);
+  }
+  //styles for the focus
+  &:focus-visible {
+    outline: max(2px, 0.15rem) solid var(--color-tertiary-teal);
+    outline-offset: max(2px, 0.15rem);
+  }
+
+  //disabled state
+  &:disabled,
+  &--disabled {
+    pointer-events: none;
+    --nj-checkbox-border-color: var(--nj-checkbox-disabled-border-color);
+    --nj-checkbox-bg-color: var(--nj-checkbox-disabled-bg-color);
+    &:checked::after {
+      background-image: url("data:image/svg+xml;utf8,<svg width='14' height='10' viewBox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L5.70711 9.70711C5.51957 9.89464 5.26522 10 5 10C4.73478 10 4.48043 9.89464 4.29289 9.70711L0.292893 5.70711C-0.0976311 5.31658 -0.0976311 4.68342 0.292893 4.29289C0.683417 3.90237 1.31658 3.90237 1.70711 4.29289L5 7.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893Z' fill='gray'/></svg>");
+    }
+  }
+}

@@ -1,0 +1,11 @@
+//- Import the button component
+include ../button/button
+
+//- Info Block Component
+mixin infoBlock(icon, linkText, linkHref, description)
+  .info-block
+    .info-block__icon
+      img(src=icon, alt='')
+    p.info-block__content
+      +button(linkText, 'nj-button--ghost', null, linkHref)
+      span.info-block__description &nbsp; #{description}

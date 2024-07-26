@@ -1,8 +1,9 @@
-@import "../components/demo/demo";
-@import "../components/blockInfo/blockInfo";
-@import "../components/testControl/testControl";
-@import "../components/badgeTest/badgeTest";
-@import "../components/boutonTest/boutonTest";
-@import "../components/monBonus/monBonus";
-@import "../components/monBonusValide/monBonusValide";
-
+@import "globals/tokens";
+@import "globals/base";
+@import "globals/typography";
+@import "../components/button/button";
+@import "../components/badge/badge";
+@import "../components/checkbox/checkbox";
+@import "../components/infoBlock/infoBlock";
+@import "../components/formGroup/formGroup";
+@import "../components/pushPromo/pushPromo";

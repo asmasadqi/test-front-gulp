@@ -1,0 +1,7 @@
+mixin button(label, variant, icon, href)
+  if href
+    a(class=`nj-button ${variant}`, href=href)
+      span #{label}
+  else
+    button(class=`nj-button ${variant}`)
+      span #{label}
