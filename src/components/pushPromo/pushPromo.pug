@@ -4,17 +4,17 @@ include ../badge/badge
 include ../infoBlock/infoBlock
 
 mixin pushPromo(title, subTitle, contentTitle, badgeText, stateClass)
-  .push-promo(class=stateClass)
+  .nj-push-promo(class=stateClass)
     if badgeText
       +badge(badgeText, 'secondary')
-    if stateClass === 'push-promo--accepted'
-      button.push-promo__close-button &times;
-    .push-promo__header
-      h3.push-promo__title #{title}
-      p.push-promo__sub-title #{subTitle}
-    .push-promo__content-container
-      .push-promo__content
-        p.push-promo__content-title #{contentTitle}
+    if stateClass === 'nj-push-promo--accepted'
+      button.nj-push-promo__close-button &times;
+    .nj-push-promo__header
+      h3.nj-push-promo__title #{title}
+      p.nj-push-promo__sub-title #{subTitle}
+    .nj-push-promo__content-container
+      .nj-push-promo__content
+        p.nj-push-promo__content-title #{contentTitle}
         block
-      if stateClass === 'push-promo--accepted'
-        +infoBlock('images/InfoLight.png', 'Téléchargez l\'application ENGIE', '#', 'pour être notifié du prochain jour de challenge.')
+      if stateClass === 'nj-push-promo--accepted'
+        +infoBlock('images/iphone.png', 'Téléchargez l\'application ENGIE', '#', 'pour être notifié du prochain jour de challenge.')

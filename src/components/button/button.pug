@@ -1,7 +1,7 @@
-mixin button(label, variant, icon, href)
+mixin button(label, variant, href, disabled)
   if href
-    a(class=`nj-button ${variant}`, href=href)
+    a(class=`nj-button ${variant} ${disabled ? 'disabled' : ''}`, href=href)
       span #{label}
   else
-    button(class=`nj-button ${variant}`)
+    button(class=`nj-button ${variant}` disabled=disabled)
       span #{label}

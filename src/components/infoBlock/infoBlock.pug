@@ -3,9 +3,9 @@ include ../button/button
 
 //- Info Block Component
 mixin infoBlock(icon, linkText, linkHref, description)
-  .info-block
-    .info-block__icon
+  .nj-info-block
+    .nj-info-block__icon
       img(src=icon, alt='')
-    p.info-block__content
-      +button(linkText, 'nj-button--ghost', null, linkHref)
-      span.info-block__description &nbsp; #{description}
+    p.nj-info-block__content
+      +button(linkText, 'nj-button--ghost', linkHref, false)
+      span.nj-info-block__description &nbsp; #{description}

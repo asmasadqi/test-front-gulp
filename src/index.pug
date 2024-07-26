@@ -9,11 +9,17 @@ include ./components/pushPromo/pushPromo
 
 block content
 
-  +button('Label bouton', 'nj-button--primary', )
+  +button('Label bouton', 'nj-button--primary')
+  <hr>
+  +button('Label bouton', 'nj-button--primary', '', true)
   <hr>
   +button('Label bouton', 'nj-button--secondary')
   <hr>
+  +button('Label bouton', 'nj-button--secondary', '', true)
+  <hr>
   +button('Label bouton', 'nj-button--ghost')
+  <hr>
+  +button('Label bouton', 'nj-button--ghost', '', true)
   <hr>
 
   +badge('Bon plan ', 'primary')
@@ -27,20 +33,20 @@ block content
 
   <hr>
 
-  +infoBlock('images/InfoLight.png', 'Téléchargez l\'application ENGIE', '#', 'pour être notifié du prochain jour de challenge.')
+  +infoBlock('images/iphone.png', 'Téléchargez l\'application ENGIE', '#', 'pour être notifié du prochain jour de challenge.')
   
   <hr>
 
   +pushPromo('Mon Bonus', 'Agissons ensemble !', 'L\'écodéfi Gaz vient de commencer ! Prêt à relever le défi ?', 'Bon plan', '')
     p Cet hiver, réduisez vos consommations certains jours. Pour vous remercier, des primes vous seront reversées !
     +formGroup('J\'accepte les ', 'Conditions générales ', 'https://www.example.com/terms', ' de l\'offre Mon Bonus', '')
-    div.push-promo__cta-wrapper
+    div.nj-push-promo__cta-wrapper
       +button('Je participe', 'nj-button--primary', )
       +button('Comment ça marche ?', 'nj-button--ghost')
   
   <hr>
 
-  +pushPromo('Mon Bonus', 'Agissons ensemble !', 'Vous avez activé Mon Bonus. Merci pour votre participation !', 'Bon plan', 'push-promo--accepted')
+  +pushPromo('Mon Bonus', 'Agissons ensemble !', 'Vous avez activé Mon Bonus. Merci pour votre participation !', 'Bon plan', 'nj-push-promo--accepted')
     p Les prochains jours critiques vous seront indiqués 1 à 4 jours à l'avance, sur cette page.
       +button('Comment ça marche ?', 'nj-button--ghost')
     

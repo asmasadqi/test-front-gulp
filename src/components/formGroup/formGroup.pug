@@ -4,13 +4,13 @@ include ../checkbox/checkbox
 include ../button/button
 
 mixin formGroup(beforeText, linkText, linkUrl, afterText, error)
-  div.form-group
-    div.form-group__control
+  div.nj-form-group
+    div.nj-form-group__control
       +checkbox('accept-terms', false)
       label(for="accept-terms").label-text
         | #{beforeText} 
-        +button(linkText, 'nj-button--ghost', null, linkUrl)
+        +button(linkText, 'nj-button--ghost', linkUrl, false)
         | #{afterText}
-    div.form-group__feedback-msg
+    div.nj-form-group__feedback-msg
       if error
-        p.form-group__error #{error}
+        p.nj-form-group__error #{error}
